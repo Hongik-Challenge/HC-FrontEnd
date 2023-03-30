@@ -8,6 +8,12 @@
       "shared/*"
     ]
   },
+  "scripts": {
+    "apps": "yarn workspace apps dev ",
+    "apps:build": "yarn workspace apps build",
+    "apps:start": "yarn workspace apps start",
+    "storybook": "yarn workspace @hc/ui storybook"
+  },
   "devDependencies": {
     "@types/eslint": "^8",
     "@types/node": "^18.15.11",

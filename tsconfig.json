@@ -19,7 +19,7 @@
   },
   "references": [
     {
-      "path": "apps/"
+      "path": "apps/hongik"
     },
     {
       "path": "shared/ui"
