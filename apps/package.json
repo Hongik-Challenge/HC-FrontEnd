@@ -1,0 +1,9 @@
+{
+  "name": "@hc/apps",
+  "privatae":true,
+  "dependencies": {
+    "@hc/ui": "workspace:shared/ui",
+    "@hc/utils": "workspace:shared/utils"
+  },
+  "packageManager": "yarn@3.5.0"
+}
