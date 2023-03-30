@@ -1,9 +1,15 @@
 {
   "name": "@hc/apps",
-  "privatae":true,
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@hc/ui": "workspace:shared/ui",
     "@hc/utils": "workspace:shared/utils"
   },
-  "packageManager": "yarn@3.5.0"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  }
 }

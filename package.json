@@ -7,5 +7,15 @@
       "apps/*",
       "shared/*"
     ]
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.31",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
+    "typescript": "^5.0.2"
   }
 }
