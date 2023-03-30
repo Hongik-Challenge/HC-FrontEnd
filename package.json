@@ -17,5 +17,16 @@
     "eslint": "latest",
     "eslint-plugin-react": "latest",
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "next-transpile-modules": "^10.0.0"
+  },
+  "resolutions": {
+    "webpack": "5",
+    "@storybook/core-common/webpack": "^5",
+    "@storybook/core-server/webpack": "^5",
+    "@storybook/react/webpack": "^5"
   }
 }
