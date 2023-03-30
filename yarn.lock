@@ -10280,6 +10280,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hongik@workspace:apps/hongik"
   dependencies:
+    "@hc/ui": "workspace:shared/ui"
+    "@hc/utils": "workspace:shared/utils"
     "@types/eslint": ^8
     "@types/node": 18.15.11
     "@types/react": 18.0.31
