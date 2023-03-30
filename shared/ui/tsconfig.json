@@ -1,6 +1,10 @@
 {
+  "extends": [
+    "../../tsconfig.json",
+    "@typescript-eslint/parser"
+  ],
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,19 +19,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "composite": true,
+    "declaration": true
   },
-  "references": [
-    {
-      "path": "apps/"
-    },
-    {
-      "path": "shared/ui"
-    },
-    {
-      "path":"shared/utils"
-    }
-  ],
-  "include": ["src"],
-  "exclude": ["app/**/dist/**"]
+  "include": ["src", "../../apps/ticket/src/lib/apis/user"]
 }

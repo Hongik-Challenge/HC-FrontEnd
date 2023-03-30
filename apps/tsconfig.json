@@ -1,4 +1,5 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -14,10 +15,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    //절대경로 설정
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@pages/*": ["pages/*"],
+      "@components/*": ["src/components/*"],
+      "@lib/*": ["src/lib/*"],
+      "@store/*": ["src/store/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../../**/*.d.ts"],
   "exclude": ["node_modules"]
 }
