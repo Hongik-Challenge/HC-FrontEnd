@@ -13,6 +13,7 @@ RUN yarn install --immutable --immutable-cache --check-cache
 # Copies everything over to Docker environment
 COPY . ./
 
+RUN yarn install
 # RUN npm run build
 RUN yarn hongik:build
 RUN rm -rf apps/hongik/.next/cache
