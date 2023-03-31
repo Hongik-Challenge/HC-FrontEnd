@@ -1,12 +1,13 @@
 
 import { Inter } from 'next/font/google'
+import { Tag } from '@hc/ui'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
-     <h2>안녕</h2>
+      <Tag text ="안뇽"/>
     </>
   )
 }
