@@ -12,7 +12,8 @@
     "hongik": "yarn workspace hongik dev ",
     "hongik:build": "yarn workspace hongik build",
     "hongik:start": "yarn workspace hongik start",
-    "storybook": "yarn workspace @hc/ui storybook"
+    "storybook": "yarn workspace @hc/ui storybook",
+    
   },
   "devDependencies": {
     "@storybook/builder-webpack5": "^6.5.16",
