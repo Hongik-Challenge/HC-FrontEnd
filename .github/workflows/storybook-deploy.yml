@@ -18,4 +18,5 @@ jobs:
           cd shared/ui
           yarn install
           yarn run deploy-storybook -- --ci
-        
+         env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
