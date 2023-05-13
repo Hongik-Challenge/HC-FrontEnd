@@ -4,8 +4,7 @@ on:
   push:
     branches: 
       - 'dev'
-    paths: 
-      - 'shared/ui/src/**'
+    
   
 jobs:
   build-and-deploy:
