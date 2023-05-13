@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 export const calcRem = (px: number) => `${px / 16}rem`;
 
-//Typo 지정.........
+//Typo 지정...........
 export const typo = {
   Header_24: css`
     font-family: 'Pretendard';
