@@ -14,3 +14,5 @@ jobs:
           cd shared/ui
           yarn install
           yarn run deploy-storybook -- --ci
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
