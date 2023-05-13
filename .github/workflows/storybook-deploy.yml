@@ -5,7 +5,7 @@ on:
     branches: 
       - 'dev'
     paths: 
-      - '../../shared/ui/src/**'
+      - 'shared/ui/src/**'
   
 jobs:
   build-and-deploy:
