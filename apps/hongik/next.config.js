@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@hc/ui', '@hc/utils'],
+  compiler: {
+    styledComponents: true,
+  },
   experimental: {
     appDir: true
   }, 

@@ -1,53 +1,32 @@
-// import { css } from '@emotion/react';
-// import emotionReset from 'emotion-reset';
-// import { media } from './theme';
 
-// export const globalStyle = css`
-//     ${emotionReset}
+import reset from "styled-reset";
+import { media } from './theme';
+import { createGlobalStyle } from "styled-components";
 
-//   @font-face {
-//     font-family: 'Pretendard';
-//     font-style: normal;
-//     font-weight: 700;
-//     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff')
-//       format('woff');
-//   }
-//   @font-face {
-//     font-family: 'Pretendard';
-//     font-style: normal;
-//     font-weight: 600;
-//     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff')
-//       format('woff');
-//   }
-//   @font-face {
-//     font-family: 'Pretendard';
-//     font-style: normal;
-//     font-weight: 500;
-//     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff')
-//       format('woff');
-//   }
-//   @font-face {
-//     font-family: 'Pretendard';
-//     font-style: normal;
-//     font-weight: 400;
-//     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
-//       format('woff');
-//   }
+export const GlobalStyle = createGlobalStyle`
+    ${reset}
+    @font-face {
+    font-family: 'Pretendard Variable';
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    }
 
-//   body {
-//     font-family: 'Pretendard', Pretendard, -apple-system, BlinkMacSystemFont,
-//       system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
-//       'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
-//       'Segoe UI Symbol', sans-serif !important;
-//     box-sizing: border-box;
+    body{
+        font-family: -apple-system, BlinkMacSystemFont, 
+            "Apple SD Gothic Neo", 
+            "Pretendard Variable", 
+            Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 
+            sans-serif;
+    }
 
-//     -webkit-tap-highlight-color: transparent;
-//     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-//     ${media.mobile} {
-//       -ms-overflow-style: none;
-//     }
-//   }
+     -webkit-tap-highlight-color: transparent;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ 
+    ${media.mobile} {
+       -ms-overflow-style: none;
+    } 
+`;
 //   button {
 //     background: inherit;
 //     border: none;

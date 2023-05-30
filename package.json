@@ -15,7 +15,7 @@
     "storybook": "yarn workspace @hc/ui storybook"
   },
   "devDependencies": {
-    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/builder-webpack5": "^7.0.18",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/storybook-deployer": "^2.8.16",
     "@types/eslint": "^8",
@@ -30,8 +30,10 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "@storybook/addon-actions": "latest",
     "next-transpile-modules": "^10.0.0",
-    "styled-components": "^5.3.11"
+    "styled-components": "^5.3.11",
+    "styled-reset": "^4.4.7"
   },
   "resolutions": {
     "webpack": "5",

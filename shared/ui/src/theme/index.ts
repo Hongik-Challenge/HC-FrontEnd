@@ -1,3 +1,2 @@
-// //export * from './global';
-// // export * from './theme'
-// export * from './global'
+export * from './global';
+export * from './theme';
