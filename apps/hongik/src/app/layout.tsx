@@ -1,25 +1,19 @@
 import StyledComponentsRegistry from '@lib/registry';
 import Provider from './Provider';
-import localFont from 'next/font/local';
-
-const pretendardFont = localFont({
-	src: '../../public/PretendardVariable.woff2',
-	display: 'swap',
-});
-
 
 export default function RootLayout({
   children }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={pretendardFont.className}>
+    <html lang="en">
+      <head></head>
       <body>
+      <Provider>
           <StyledComponentsRegistry>
-            <Provider>
               {children}
-            </Provider>
           </StyledComponentsRegistry>
+      </Provider>
         </body>
     </html>
   );

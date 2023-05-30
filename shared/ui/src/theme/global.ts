@@ -1,16 +1,9 @@
-
 import reset from "styled-reset";
 import { media } from './theme';
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     ${reset}
-    @font-face {
-    font-family: 'Pretendard Variable';
-    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    }
 
     body{
         font-family: -apple-system, BlinkMacSystemFont, 
