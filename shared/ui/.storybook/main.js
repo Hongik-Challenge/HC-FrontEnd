@@ -1,4 +1,20 @@
 module.exports = {
+
+  webpackFinal: async (config) => {
+    config.module.rules.push({
+      test: /\.(js|jsx|ts|tsx)$/,
+      use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react'],
+            plugins: [['babel-plugin-styled-components', { ssr: true }]],
+          },
+        },
+      ],
+    });
+    return config;
+  },
   stories: [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"

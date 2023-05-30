@@ -1,4 +1,4 @@
-import { Global, ThemeProvider } from "@emotion/react"
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
