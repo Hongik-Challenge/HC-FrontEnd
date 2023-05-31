@@ -1,6 +1,6 @@
 import reset from "styled-reset";
 import * as styled from 'styled-components';
-import { media } from './theme';
+import { media } from "@hc/ui";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = styled.createGlobalStyle`
@@ -218,6 +218,7 @@ export const GlobalStyle = styled.createGlobalStyle`
         --main-width: 600px;
     }
     body{
-        background-color: aqua;
+        background-color: #e1e1e1;
     }
+
 `;

@@ -19,13 +19,18 @@
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-lottie": "^1.2.3",
     "react-query-devtools": "^2.6.3",
+    "react-responsive": "^9.0.2",
     "recoil": "^0.7.7",
     "typescript": "5.0.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8"
+    "@types/eslint": "^8",
+    "@types/prop-types": "^15",
+    "@types/react-lottie": "^1"
   }
 }

@@ -5615,6 +5615,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-lottie@npm:^1":
+  version: 1.2.6
+  resolution: "@types/react-lottie@npm:1.2.6"
+  dependencies:
+    "@types/react": "*"
+  checksum: 7930bad2cc998d62c3be4a0c66edfcbf1d87af6ffca5befa860acec706fd62e6e1e964ecffe88c3ed5a42668606e9ff1f43cc1beff764c679f68aa05166ce746
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:latest":
   version: 18.2.7
   resolution: "@types/react@npm:18.2.7"
@@ -7087,6 +7096,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-runtime@npm:^6.26.0":
+  version: 6.26.0
+  resolution: "babel-runtime@npm:6.26.0"
+  dependencies:
+    core-js: ^2.4.0
+    regenerator-runtime: ^0.11.0
+  checksum: 8aeade94665e67a73c1ccc10f6fd42ba0c689b980032b70929de7a6d9a12eb87ef51902733f8fefede35afea7a5c3ef7e916a64d503446c1eedc9e3284bd3d50
+  languageName: node
+  linkType: hard
+
 "bail@npm:^1.0.0":
   version: 1.0.5
   resolution: "bail@npm:1.0.5"
@@ -8119,6 +8138,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:^2.4.0":
+  version: 2.6.12
+  resolution: "core-js@npm:2.6.12"
+  checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
+  languageName: node
+  linkType: hard
+
 "core-js@npm:^3.0.4, core-js@npm:^3.19.2, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
   version: 3.30.2
   resolution: "core-js@npm:3.30.2"
@@ -8319,6 +8345,13 @@ __metadata:
   peerDependencies:
     webpack: ^5.0.0
   checksum: 7c1784247bdbe76dc5c55fb1ac84f1d4177a74c47259942c9cfdb7a8e6baef11967a0bc85ac285f26bd26d5059decb848af8154a03fdb4f4894f41212f45eef3
+  languageName: node
+  linkType: hard
+
+"css-mediaquery@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "css-mediaquery@npm:0.1.2"
+  checksum: 8e26ae52d8aaaa71893f82fc485363ff0fab494b7d3b3464572aaed50714b8b538d33dbdaa69f0c02cf7f80d1f4d9a77519306c0492223ce91b3987475031a69
   languageName: node
   linkType: hard
 
@@ -11385,14 +11418,19 @@ __metadata:
     "@tanstack/react-query-devtools": ^4.29.12
     "@types/eslint": ^8
     "@types/node": 18.15.11
+    "@types/prop-types": ^15
     "@types/react": 18.0.31
     "@types/react-dom": 18.0.11
+    "@types/react-lottie": ^1
     eslint: 8.37.0
     eslint-config-next: 13.2.4
     next: 13.2.4
+    prop-types: ^15.8.1
     react: 18.2.0
     react-dom: 18.2.0
+    react-lottie: ^1.2.3
     react-query-devtools: ^2.6.3
+    react-responsive: ^9.0.2
     recoil: ^0.7.7
     typescript: 5.0.2
   languageName: unknown
@@ -11668,6 +11706,13 @@ __metadata:
   dependencies:
     ms: ^2.0.0
   checksum: 9c7a74a2827f9294c009266c82031030eae811ca87b0da3dceb8d6071b9bde22c9f3daef0469c3c533cc67a97d8a167cd9fc0389350e5f415f61a79b171ded16
+  languageName: node
+  linkType: hard
+
+"hyphenate-style-name@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "hyphenate-style-name@npm:1.0.4"
+  checksum: 4f5bf4b055089754924babebaa23c17845937bcca6aee95d5d015f8fa1e6814279002bd6a9e541e3fac2cd02519fc76305396727066c57c8e21a7e73e7a12137
   languageName: node
   linkType: hard
 
@@ -13802,6 +13847,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-web@npm:^5.1.3":
+  version: 5.12.0
+  resolution: "lottie-web@npm:5.12.0"
+  checksum: 77c35be880e484d1a766f21f789ede7c7be59e957579580a18c2dfec08c4812c03e1d652e453166c31fd80556446d6b857fb490d901e34154105532519bc5ef5
+  languageName: node
+  linkType: hard
+
 "loud-rejection@npm:^1.0.0":
   version: 1.6.0
   resolution: "loud-rejection@npm:1.6.0"
@@ -13969,6 +14021,15 @@ __metadata:
     "@babel/runtime": ^7.10.5
     remove-accents: 0.4.2
   checksum: 7f3cd8f84cdb4567b7a81f66a095e418044f318f41b6c8a1640730c99e370af9e5054f5a1ed2dfa1287a23101d75a105da63e4d95e8ac2f7061a8f8b32367c7d
+  languageName: node
+  linkType: hard
+
+"matchmediaquery@npm:^0.3.0":
+  version: 0.3.1
+  resolution: "matchmediaquery@npm:0.3.1"
+  dependencies:
+    css-mediaquery: ^0.1.2
+  checksum: 154e1650f79d78858424d7086093756ad2fdb1cd9ad19230b99a47c363a1da9c6692d6ca56ea49447fb516f580c59fd60d8b9a06247e088d8e1a658e6e5604d7
   languageName: node
   linkType: hard
 
@@ -16644,7 +16705,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.0.0, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.0.0, prop-types@npm:^15.6.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -16965,6 +17026,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-lottie@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "react-lottie@npm:1.2.3"
+  dependencies:
+    babel-runtime: ^6.26.0
+    lottie-web: ^5.1.3
+  peerDependencies:
+    react: ^0.14.7 || ^15.0.0 || ^16.0.0
+  checksum: 05326e40b45cb1f52efe324386875858cec4725392d98033f767566c2f101bdbf59111a42108596ef63c96c897f13cf8d3c612e7a288d0dee3e1b7fb1a7911a2
+  languageName: node
+  linkType: hard
+
 "react-merge-refs@npm:^1.0.0":
   version: 1.1.0
   resolution: "react-merge-refs@npm:1.1.0"
@@ -16988,6 +17061,20 @@ __metadata:
   version: 0.11.0
   resolution: "react-refresh@npm:0.11.0"
   checksum: 112178a05b1e0ffeaf5d9fb4e56b4410a34a73adeb04dbf13abdc50d9ac9df2ada83e81485156cca0b3fa296aa3612751b3d6cd13be4464642a43679b819cbc7
+  languageName: node
+  linkType: hard
+
+"react-responsive@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "react-responsive@npm:9.0.2"
+  dependencies:
+    hyphenate-style-name: ^1.0.0
+    matchmediaquery: ^0.3.0
+    prop-types: ^15.6.1
+    shallow-equal: ^1.2.1
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 97c827db903125f256d7197161bf4c1d77044b12aa2fee05b7d0dc2317eab62897c006a68940c5399c209da2732e4901e92a93bf09c113ac9334232bb842ffd4
   languageName: node
   linkType: hard
 
@@ -17222,6 +17309,13 @@ __metadata:
   version: 1.4.2
   resolution: "regenerate@npm:1.4.2"
   checksum: 3317a09b2f802da8db09aa276e469b57a6c0dd818347e05b8862959c6193408242f150db5de83c12c3fa99091ad95fb42a6db2c3329bfaa12a0ea4cbbeb30cb0
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.11.0":
+  version: 0.11.1
+  resolution: "regenerator-runtime@npm:0.11.1"
+  checksum: 3c97bd2c7b2b3247e6f8e2147a002eb78c995323732dad5dc70fac8d8d0b758d0295e7015b90d3d444446ae77cbd24b9f9123ec3a77018e81d8999818301b4f4
   languageName: node
   linkType: hard
 
@@ -18034,6 +18128,13 @@ __metadata:
   dependencies:
     kind-of: ^6.0.2
   checksum: 39b3dd9630a774aba288a680e7d2901f5c0eae7b8387fc5c8ea559918b29b3da144b7bdb990d7ccd9e11be05508ac9e459ce51d01fd65e583282f6ffafcba2e7
+  languageName: node
+  linkType: hard
+
+"shallow-equal@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "shallow-equal@npm:1.2.1"
+  checksum: 4f1645cc516e7754c4438db687e1da439a5f29a7dba2ba90c5f88e5708aeb17bc4355ba45cad805b0e95dc898e37d8bf6d77d854919c7512f89939986cff8cd1
   languageName: node
   linkType: hard
 
