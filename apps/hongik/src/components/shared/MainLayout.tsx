@@ -1,5 +1,4 @@
 import { media } from "@hc/ui";
-import { css } from "styled-components";
 import styled from "styled-components";
 import { ReactNode } from "react";
 

@@ -1,6 +1,5 @@
 'use client'
 import styled from "styled-components";
-import { theme } from "@hc/ui";
 import Lottie from "react-lottie";
 import lottieJson1 from "../../public/main_top.json";
 import lottieJson2 from "../../public/main_bottom.json";
@@ -26,6 +25,7 @@ export default function Page() {
     
     <Wrapper>
       <Lottie options={lottieTop}/>
+      <h1>아앙</h1>
       <Lottie options ={lottieBottom}/>
     </Wrapper>
     )
