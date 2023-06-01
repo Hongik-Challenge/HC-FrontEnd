@@ -1,7 +1,6 @@
 import reset from "styled-reset";
 import * as styled from 'styled-components';
 import { media } from "@hc/ui";
-import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = styled.createGlobalStyle`
     ${reset}
@@ -118,9 +117,7 @@ export const GlobalStyle = styled.createGlobalStyle`
 	}
 
     body{
-        font-family: -apple-system, BlinkMacSystemFont, 
-            "Apple SD Gothic Neo", 
-            "Pretendard Variable", 
+        font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", 
             Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 
             sans-serif;
     }
@@ -218,7 +215,10 @@ export const GlobalStyle = styled.createGlobalStyle`
         --main-width: 600px;
     }
     body{
-        background-color: #e1e1e1;
+        background-color: #ffffff;
+		${media.pc} {
+			background-color: #e1e1e1;
+		}
     }
 
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 export const Tag = () => {
   return(
@@ -7,3 +8,6 @@ export const Tag = () => {
     </div>
   )
 }
+const Wrapper = styled.div`
+  background-color: ${theme.palette.black};
+`

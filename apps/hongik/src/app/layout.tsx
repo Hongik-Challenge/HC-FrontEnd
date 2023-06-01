@@ -7,7 +7,6 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '@hc/ui';
 import { GlobalStyle } from 'src/styles/GlobalStyle';
 import MainLayout from '@components/shared/MainLayout';
-import { Main } from 'next/document';
 
 
 export default function RootLayout({ children }: { children: React.ReactNode;
