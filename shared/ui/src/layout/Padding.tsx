@@ -1,7 +1,6 @@
-import { css } from 'styled-components';
-import { HTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-interface PaddingProps extends HTMLAttributes<HTMLDivElement> {
+interface PaddingProps extends React.ComponentProps<'div'> {
   children: ReactNode;
   size?: PaddingSize;
   fill?: boolean;
@@ -28,15 +27,15 @@ export const Padding = ({
 }: PaddingProps) => {
   return (
     <div
-      css={css`
-        padding: ${typeof size === 'number'
+      style={{
+        'padding': `${typeof size === 'number'
           ? `${size}px`
           : size.length === 2
           ? `${size[0]}px ${size[1]}px`
           : `${size[0]}px ${size[1]}px ${size[2]}px ${size[3]}px`};
-        ${fill && 'width : 100%;'}
-        box-sizing:border-box;
-      `}
+        ${fill && 'width : 100%;'}`,
+        boxSizing:'border-box'
+    }}
       {...props}
     >
       {children}

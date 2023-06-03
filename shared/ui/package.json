@@ -5,11 +5,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "@babel/preset-typescript": "^7.21.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-react-require": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -47,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.22.3",
     "@mdx-js/react": "^1.6.22",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-docs": "^6.5.16",
@@ -60,9 +68,13 @@
     "@storybook/react": "^6.5.16",
     "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
+    "@types/babel__core": "^7",
+    "@types/babel__preset-env": "^7",
     "@types/prop-types": "^15",
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
-    "webpack": "^5.77.0"
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
   }
 }

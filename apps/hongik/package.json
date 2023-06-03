@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/core": "^7.22.1",
     "@hc/ui": "workspace:shared/ui",
     "@hc/utils": "workspace:shared/utils",
+    "@storybook/react": "^7.0.18",
     "@tanstack/react-query": "^4.29.12",
     "@tanstack/react-query-devtools": "^4.29.12",
     "@types/node": "18.15.11",
@@ -29,6 +31,7 @@
     "typescript": "5.0.2"
   },
   "devDependencies": {
+    "@types/babel__core": "^7",
     "@types/eslint": "^8",
     "@types/prop-types": "^15",
     "@types/react-lottie": "^1"
