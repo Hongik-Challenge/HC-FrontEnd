@@ -15,9 +15,10 @@
     "storybook": "yarn workspace @hc/ui storybook"
   },
   "devDependencies": {
-    "@storybook/builder-webpack5": "^7.0.18",
+    "@storybook/builder-webpack5": "^6.5.16",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/storybook-deployer": "^2.8.16",
+    "@types/babel__core": "^7",
     "@types/eslint": "^8",
     "@types/node": "^18.15.11",
     "@types/react": "latest",
@@ -30,13 +31,16 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "@babel/core": "^7.22.1",
     "@storybook/addon-actions": "latest",
+    "babel-loader": "^9.1.2",
     "next-transpile-modules": "^10.0.0",
     "styled-components": "^5.3.11",
     "styled-reset": "^4.4.7"
   },
   "resolutions": {
     "webpack": "5",
+    "@babel/core": "^7.21.4",
     "@storybook/core-common/webpack": "^5",
     "@storybook/core-server/webpack": "^5",
     "@storybook/react/webpack": "^5"
