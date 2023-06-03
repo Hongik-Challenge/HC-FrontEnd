@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 import { FlexBox } from "../../layout";
+import { Text } from "../Text";
+
 
 export interface NavBarProps {
     label?: string;
@@ -22,9 +24,9 @@ export const NavBar = ({
 }: NavBarProps) => {
     return (
         <Wrapper>
-            <FlexBox direction="column" align ={'flex-start'} fullWidth={true}>
+            <FlexBox direction="row" justify="flex-start" align="center">
                 {leftElement}
-                안녕하슈
+                <Text typo={'Body1_1'}>{label}</Text>
                 {rightElement}
             </FlexBox>
         </Wrapper>

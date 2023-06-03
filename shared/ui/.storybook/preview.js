@@ -1,5 +1,8 @@
+import { theme } from '../src/theme';
+import { ThemeProvider } from 'styled-components';
 
 export const parameters = {
+  layout: 'fullscreen',
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -36,3 +39,12 @@ export const parameters = {
     defaultViewport: 'mobile',
   },
 }
+
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      {/* <Global styles={globalStyle} /> */}
+      <Story />
+    </ThemeProvider>
+  ),
+];
