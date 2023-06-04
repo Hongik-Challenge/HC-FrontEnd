@@ -1,5 +1,8 @@
 import { theme } from '../src/theme';
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from '../../../apps/hongik/src/styles/GlobalStyle';
+import { withRouter } from 'storybook-addon-react-router-v6';
+import { BrowserRouter } from 'react-router-dom';
 
 export const parameters = {
   layout: 'fullscreen',
@@ -9,6 +12,15 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+
+  parameters: {
+    nextjs:{
+      appDirectory: true,
+      router: {
+        basePath: '/classpick'
+      }
+    }
   },
   paddings: {
     values: [
@@ -42,9 +54,11 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
-      {/* <Global styles={globalStyle} /> */}
-      <Story />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle/>
+        <Story />
+      </ThemeProvider>
+    </BrowserRouter>
   ),
 ];
