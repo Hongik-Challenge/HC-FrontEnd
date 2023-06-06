@@ -14,10 +14,14 @@
     "@testing-library/user-event": "^13.5.0",
     "babel-loader": "^9.1.2",
     "babel-plugin-react-require": "^4.0.0",
+    "babel-plugin-styled-components": "^2.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
+    "storybook-addon-react-router-v6": "^1.0.2",
+    "styled-components": "^5.3.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -71,6 +75,7 @@
     "@types/babel__core": "^7",
     "@types/babel__preset-env": "^7",
     "@types/prop-types": "^15",
+    "@types/styled-components": "^5.1.26",
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
     "webpack": "^5.85.0",

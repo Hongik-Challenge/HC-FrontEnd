@@ -1,9 +1,12 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 import { FlexBox } from "../../layout";
+import { Text } from "../Text";
+
+
 
 export interface NavBarProps {
-    label?: string;
+    label?: ReactNode;
     to?: string;
     leftElement?: ReactNode;
     rightElement?: ReactNode;
@@ -22,17 +25,31 @@ export const NavBar = ({
 }: NavBarProps) => {
     return (
         <Wrapper>
-            <FlexBox direction="column" align ={'flex-start'} fullWidth={true}>
+            <ElemWrapper>
                 {leftElement}
-                안녕하슈
-                {rightElement}
-            </FlexBox>
+                {typeof(label) === 'string' ? (
+                    <Text typo={'Headline2'}>{label}</Text>
+                ): label}
+                <div style ={{position: 'absolute', right: '2px'}}> {rightElement}</div>
+            </ElemWrapper>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
+    display:flex;
+    align-items: center;
     width: 100%;
     height: 60px;
     box-shadow: 0px 2px 5px rgba(37, 37, 37, 0.05);
+`
+
+const ElemWrapper = styled.div`
+    margin: 13px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    position: relative;
 `
