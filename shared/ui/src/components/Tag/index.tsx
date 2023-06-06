@@ -70,9 +70,9 @@ const Wrapper = styled.div<{color: TagColorVariant, variant: TagVariant}>`
   padding: ${({variant}) => TAG_SIZE[variant].padding};
   height: ${({variant}) => TAG_SIZE[variant].height};
   ${({color}) => color === 'basic' &&
-  css`
-    border : 1px solid #ECECEC;
-  `}
+    css`
+      border : 1px solid #ECECEC;
+    `}
   display: inline-block;
   color : ${({color, theme}) => theme.palette[TAG_COLOR[color].fontColor]};
 `;

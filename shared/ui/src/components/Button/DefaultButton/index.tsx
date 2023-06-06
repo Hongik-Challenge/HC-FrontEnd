@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 import { KeyOfColor, KeyOfTypo } from "../../../theme";
 import styled from "styled-components";
+import { css } from "styled-components";
 
 type BtnSizeVariant = 'lg' | 'md' | 'sm'
 type BtnColorVariant = 'normal' | 'inactive' | 'outlined' |  'blue' | 'stroke';
@@ -17,6 +18,7 @@ type DefaultButtonShape = {
     [keys in BtnSizeVariant]: {
         radius: 10 | 15 | 30;
         width: string;
+        height: string;
         typo: KeyOfTypo;
         padding: string;
     }
@@ -31,9 +33,9 @@ const BUTTON_COLOR : DefaultButtonColor = {
 }
 
 const BUTTON_SHAPE : DefaultButtonShape = {
-    'lg': { radius: 10, width: '360px', typo:'Subtitle2', padding: '16px 155px'},
-    'md': { radius: 30, width: '111px', typo:'Subtitle1', padding: '11px 34px'},
-    'sm': { radius: 15, width: '78px', typo: 'Caption3_3', padding:'5px 20px'}
+    'lg': { radius: 10, height: '55px', width: '360px', typo:'Subtitle2', padding: '16px 155px'},
+    'md': { radius: 30, height: '42px', width: '111px', typo:'Subtitle1', padding: '11px 34px'},
+    'sm': { radius: 15, height: '29px', width: '78px', typo: 'Caption3_3', padding:'5px 20px'}
 }
 /**
  * @param label Button에 들어가는 text
@@ -58,9 +60,13 @@ export const DefaultButton = ({ children, variant, color, fullWidth, ...props}: 
 
 const Wrapper = styled.button<{variant: BtnSizeVariant, color: BtnColorVariant, fullWidth: Boolean}>`
     ${({ variant, theme }) => theme.typo[BUTTON_SHAPE[variant].typo]}
-    width: ${({variant})=> `${BUTTON_SHAPE[variant].width}px`};
+    width: ${({variant})=> `${BUTTON_SHAPE[variant].width}`};
+    height: ${({variant})=> `${BUTTON_SHAPE[variant].height}`};
     border-radius: ${({ variant }) => BUTTON_SHAPE[variant].radius}px;
-    background-color: ${({ theme, color }) =>
-        theme.palette[BUTTON_COLOR[color].background]};
+    background-color: ${({ theme, color }) =>theme.palette[BUTTON_COLOR[color].background]};
     color: ${({ theme, color }) => theme.palette[BUTTON_COLOR[color].color]};
-`
+    ${({theme, color}) => ((color === 'outlined' || color ==='stroke') &&
+        css`
+            border : 1px solid ${theme.palette[BUTTON_COLOR[color].radiusColor!]};
+        `)}
+`;
