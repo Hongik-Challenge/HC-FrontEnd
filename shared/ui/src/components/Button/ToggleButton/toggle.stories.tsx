@@ -10,5 +10,5 @@ export default {
 const Template: ComponentStory<typeof ToggleButton> = (args) => <ToggleButton {...args} />;
 
 export const ToggleBtn = Template.bind({});
-ToggleBtn.args = { children: '이름 변경하기'};
+ToggleBtn.args = {};
 
