@@ -1,46 +1,60 @@
-import { useState, forwardRef } from "react"
 import styled from "styled-components";
 import { MdClose } from 'react-icons/md';
 import { css } from "styled-components";
 import { ReactNode } from "react";
+import { HTMLAttributes } from "react";
 
-import { useRef } from "react";
-
-export interface DefaultModalProps {
+export interface DefaultModalProps extends HTMLAttributes<HTMLDivElement>{
     open: boolean;
     children: ReactNode;
+    onDismiss: () => void;
 }
 
-export const DefaultModal = forwardRef<HTMLDivElement, DefaultModalProps>(({
+export const DefaultModal = ({
     children,
-    open
+    onDismiss,
+    open,
+    ...props
 }: DefaultModalProps) => {
-    const [isOpen, setOpen] = useState(open);
-    const modalref = useRef(null);
-    const closeModal = () => {
-        setOpen(!open);
-    }
     return (
-            <Background onClick ={closeModal} open={isOpen}>
-                <ModalWrapper ref={modalref} className='modal'>
-                    <MdClose onClick ={closeModal}/>
-                    {children}
-                </ModalWrapper>
-            </Background>
+        <Background open={open}>
+            <Overlay onClick ={onDismiss}/>
+            <ModalWrapper>
+                <MdClose size={'1.5rem'}onClick ={onDismiss} style={{cursor:'pointer', right:'22px', position:'absolute'}}/>
+                {children}
+            </ModalWrapper>
+        </Background>
     )
-})
+}
 const Background = styled.div<{open: boolean}>`
+    @keyframes fade {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;
+        }
+    }
+    animation: 0.1s forwards fade ease-out;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index:1;
-    background-color:rgba(0, 0, 0, 0.4);
     ${({open}) => (!open && css`
         display: none;
     `)}
+`
+const Overlay = styled.div`
+    background-color:rgba(0, 0, 0, 0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
 `
 
 const ModalWrapper = styled.div`
@@ -49,14 +63,14 @@ const ModalWrapper = styled.div`
     padding: 27px 21px;
     background-color : #fff;
     z-index: 2;
+    position: relative;
     @keyframes fadeIn {
         from {
-        opacity: 0;
-        transform: scale(0.5);
+            transform: scale(0.9);
         }
         to {
-        opacity: 1;
-        transform: scale(1);
+            transform: scale(1);
         }
     }
+    animation: 0.15s forwards fadeIn ease-out;
 `

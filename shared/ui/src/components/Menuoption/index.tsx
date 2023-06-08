@@ -12,33 +12,35 @@ export interface MenuOption {
 
 export interface MenuOptionProps {
     options:MenuOption[];
-    selectedOption: MenuOption;
-    setSelectedOption: React.Dispatch<React.SetStateAction<MenuOption>>;
+    openslide: boolean;
+    selectedOption?: MenuOption;
+    setSelectedOption?: React.Dispatch<React.SetStateAction<MenuOption>>;
 }
 
 export const MenuOption = ({
     options,
     selectedOption,
     setSelectedOption,
+    openslide = true,
 }: MenuOptionProps) => {
     const navigate = useNavigate();
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(openslide);
     const onClickButton = () => {
         setOpen(!open);
     }
 
     const onClickMenuOption = (domain: string) => {
-        navigate(`/classpick/${domain}`)
+        navigate(`/classpick/${domain}`);
+        setOpen(!open);
     }
     return (
         <Container>
             <Wrapper className = {open? `open` : `close`}>
-                <MdClear size={'1.5rem'} onClick ={() => onClickButton()} style ={{position: 'absolute', right: '15px', color:'#F3111F', cursor:'pointer'}}/>
+                <MdClear size={'1.5rem'} onClick ={() => onClickButton()} style ={{position: 'absolute', right: '15px', cursor:'pointer'}}/>
                 <Spacing size ={90}/>
                 <ListWrapper>
                     {options.map((option, index) => (
                         <ListElement key={index} onClick={() => onClickMenuOption(option.menu)}>
-                            <FaCircle size ={'1.5rem'}style={{color :'#D9D9D9'}}/>
                             <Text typo = {'Headline1'}>{option.menu}</Text>
                         </ListElement>
                     ))}
@@ -50,8 +52,14 @@ export const MenuOption = ({
 
 const Container = styled.div`
     width: 100%;
+    z-index: 100;
+    position: fixed;
+    right: 20px;
     .close{
-        transform: translateX(-200px);
+        transform: translateX(360px);
+    }
+    .open{
+        transform: translateX(-500px);
     }
 `
 
@@ -77,4 +85,5 @@ const ListElement = styled.div`
     align-items: center;
     gap: 13px;
     padding: 0px 31px;
+    cursor: pointer;
 `

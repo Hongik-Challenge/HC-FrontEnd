@@ -1,16 +1,16 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import styled from "styled-components";
-import { FlexBox } from "../../layout";
 import { Text } from "../Text";
-
-
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImageBox } from "../ImageBox";
 
 export interface NavBarProps {
     label?: ReactNode;
     to?: string;
     leftElement?: ReactNode;
     rightElement?: ReactNode;
-    customEvent?:() => void;
+    setState?: () => void;
+
 }
 
 /**
@@ -21,7 +21,11 @@ export interface NavBarProps {
  */
 
 export const NavBar = ({
-    label, to, leftElement, rightElement, customEvent
+    label, 
+    to, 
+    leftElement = <ImageBox size = {[27, 27]}imageUrl='/images/classpick_logo.png'/>, 
+    rightElement = <GiHamburgerMenu color='#555555' size='1.5rem'/>, 
+    setState
 }: NavBarProps) => {
     return (
         <Wrapper>
@@ -30,7 +34,9 @@ export const NavBar = ({
                 {typeof(label) === 'string' ? (
                     <Text typo={'Headline2'}>{label}</Text>
                 ): label}
-                <div style ={{position: 'absolute', right: '2px'}}> {rightElement}</div>
+                <div onClick ={setState} style ={{position: 'absolute', right: '2px', cursor:'pointer'}}> 
+                    {rightElement}
+                </div>
             </ElemWrapper>
         </Wrapper>
     )
@@ -41,7 +47,7 @@ const Wrapper = styled.div`
     align-items: center;
     width: 100%;
     height: 60px;
-    box-shadow: 0px 2px 5px rgba(37, 37, 37, 0.05);
+    box-shadow: 0px 2px 10px rgba(37, 37, 37, 0.1);
 `
 
 const ElemWrapper = styled.div`

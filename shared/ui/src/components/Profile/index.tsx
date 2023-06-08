@@ -40,4 +40,5 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
 `

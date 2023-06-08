@@ -4,7 +4,6 @@ import { Text } from '../Text';
 interface ProgressProps {
   step: 1 | 2 | 3 | 4 ;
   currentStep: 1 | 2 | 3 | 4;
-  lastStep: number[];
 }
 
 function Progress({ step, currentStep }: ProgressProps) {

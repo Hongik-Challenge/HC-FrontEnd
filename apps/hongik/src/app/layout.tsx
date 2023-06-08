@@ -7,7 +7,8 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '@hc/ui';
 import { GlobalStyle } from 'src/styles/GlobalStyle';
 import MainLayout from '@components/shared/MainLayout';
-
+import { NavLayout } from '@components/shared/NavLayout';
+import ContentLayout from '@components/shared/ContentLayout';
 
 export default function RootLayout({ children }: { children: React.ReactNode;
 }) {
@@ -22,7 +23,10 @@ export default function RootLayout({ children }: { children: React.ReactNode;
               <GlobalStyle/>
                 <StyledComponentsRegistry>
                   <MainLayout>
-                    {children}
+                    <NavLayout/>
+                    <ContentLayout>
+                      {children}
+                    </ContentLayout>
                   </MainLayout>
                 </StyledComponentsRegistry>
             </QueryClientProvider>

@@ -15,26 +15,30 @@ export default {
     ],
 } as ComponentMeta<typeof MenuOption>;
 
-const mockMenus: MenuOption[] = [
+export const mockMenus: MenuOption[] = [
     {
-      menu:'수강신청 메뉴얼',
+      menu:'홈',
       id: 1,
     },
     {
-      menu: '졸업요건 조회',
+      menu: '수강신청 메뉴얼',
       id: 2,
     },
     {
-      menu: '개설교과목',
+      menu: '시간표 만들기',
       id: 3,
     },
     {
-      menu: '나의 수강신청',
+      menu: '우선순위 설정하기',
       id: 4,
+    },
+    {
+      menu: '나의 수강신청 결과 보기',
+      id: 5,
     }
   ]
 const Template: ComponentStory<typeof MenuOption> = (args) => <MenuOption {...args} />;
 
 export const main = Template.bind({});
-main.args = { options: mockMenus } 
+main.args = { options: mockMenus, openslide: true } 
 

@@ -1,10 +1,10 @@
 'use client'
 import styled from "styled-components";
 
-const login = () => 
-<Wrapper>로그인 테스트</Wrapper>;
+const login = () => {
+    return(
+        <div>로그인</div>
+    )
+}
 export default login;
 
-const Wrapper = styled.div`
-    ${({theme}) => theme.typo.Header_24}
-`

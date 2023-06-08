@@ -2,8 +2,7 @@ import { media } from "@hc/ui";
 import styled from "styled-components";
 import { ReactNode } from "react";
 
-
-const MainLayout = ({children}: {
+const ContentLayout = ({children}: {
     children: ReactNode,
     fullWidth?: boolean;
 }) => {
@@ -13,15 +12,18 @@ const MainLayout = ({children}: {
     </Wrapper>)
 }
 
-export default MainLayout;
+export default ContentLayout;
 
 const Wrapper = styled.main`
+  padding: 0px 20px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   ${media.pc} {
     max-width: var(--main-width);
     margin: 0 auto;
-    min-height: calc(var(--vh, 1vh) * 100);
     right: -10px;
     position:relative;
-    background-color: #ffffff;
   }
 `;
