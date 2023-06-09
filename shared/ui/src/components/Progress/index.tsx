@@ -16,10 +16,10 @@ function Progress({ step, currentStep }: ProgressProps) {
 
   return (
     <Wrapper>
-      <Circle isFilled={fill[0]} currentNum ={current[0]}><Text typo ={'Subtitle1'} color={fill[0] ? (current[0] ? 'white' : 'main_blue') : 'black_800'}>1</Text></Circle>
-      <Circle isFilled={fill[1]} currentNum ={current[1]}><Text typo ={'Subtitle1'} color={fill[1] ? (current[1] ? 'white' : 'main_blue') : 'black_800'}>2</Text></Circle>
-      <Circle isFilled={fill[2]} currentNum ={current[2]}><Text typo ={'Subtitle1'} color={fill[2] ? (current[2] ? 'white' : 'main_blue') : 'black_800'}>3</Text></Circle>
-      <Circle isFilled={fill[3]} currentNum ={current[3]}><Text typo ={'Subtitle1'} color={fill[3] ? (current[3] ? 'white' : 'main_blue') : 'black_800'}>4</Text></Circle>
+      <Circle isFilled={fill[0]} currentNum ={current[0]}><Text typo ={'Subtitle2'} color={fill[0] ? (current[0] ? 'white' : 'main_blue') : 'black_800'}>1</Text></Circle>
+      <Circle isFilled={fill[1]} currentNum ={current[1]}><Text typo ={'Subtitle2'} color={fill[1] ? (current[1] ? 'white' : 'main_blue') : 'black_800'}>2</Text></Circle>
+      <Circle isFilled={fill[2]} currentNum ={current[2]}><Text typo ={'Subtitle2'} color={fill[2] ? (current[2] ? 'white' : 'main_blue') : 'black_800'}>3</Text></Circle>
+      <Circle isFilled={fill[3]} currentNum ={current[3]}><Text typo ={'Subtitle2'} color={fill[3] ? (current[3] ? 'white' : 'main_blue') : 'black_800'}>4</Text></Circle>
     </Wrapper>
   );
 }
@@ -34,8 +34,8 @@ const Wrapper = styled.div`
 `;
 
 const Circle = styled.div<{ currentNum: boolean, isFilled: boolean }>`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 4px solid ${({ theme }) => theme.palette.black_800};
   box-sizing: border-box;
@@ -46,15 +46,15 @@ const Circle = styled.div<{ currentNum: boolean, isFilled: boolean }>`
   justify-content: center;
   align-items: center;
   :not(:first-of-type)::before{
-          content: '';
-          width: 57px;
-          height: 5px;
-          background-color: ${({ theme }) => theme.palette.black_800};
-          position: absolute;
-          right: 32px;
-          top: 13px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
+    content: '';
+    width: 44px;
+    height: 5px;
+    background-color: ${({ theme }) => theme.palette.black_800};
+    position: absolute;
+    right: 42px;
+    top: 18px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
 
   ${({ isFilled }) =>
     isFilled &&
@@ -62,12 +62,12 @@ const Circle = styled.div<{ currentNum: boolean, isFilled: boolean }>`
       border: 4px solid ${({ theme }) => theme.palette.main_blue};
       :not(:first-of-type)::before{
           content: '';
-          width: 58px;
+          width: 45px;
           height: 5px;
           background-color: ${({ theme }) => theme.palette.main_blue};
           position: absolute;
-          right: 32px;
-          top: 13px;
+          right: 43px;
+          top: 18px;
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
     `}

@@ -1,10 +1,8 @@
 'use client'
 import styled from "styled-components";
 import { Text, FlexBox } from "@hc/ui";
-import Lottie from "react-lottie";
-import lottieJson1 from "../../public/main_top.json";
-import lottieJson2 from "../../public/main_bottom.json";
 import Progress from "@hc/ui/src/components/Progress";
+import { MyDashBoard, ProgressBarSection } from "@components/index";
 
 export default function Page() {
   // const lottieTop = {
@@ -25,10 +23,11 @@ export default function Page() {
   // }
     return (
       <>
-        <FlexBox>
+        <FlexBox justify='flex-start' align='flex-start' fullWidth={true}>
           <Text typo='Headline1'>홈</Text>
         </FlexBox>
-        <Progress step={4} currentStep={2} />
+        <ProgressBarSection/>
+        <MyDashBoard/>
       </>
     )
   }

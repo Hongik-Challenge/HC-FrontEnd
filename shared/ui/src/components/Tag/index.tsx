@@ -55,6 +55,11 @@ export interface TagProps extends React.ComponentProps<'div'> {
   variant: TagVariant;
 }
 
+/**
+ * @param color 색상 선택 'basic' | 'select' | 'key'
+ * @param variant 'filter' | 'keyword';
+ */
+
 export const Tag = ({children, color, variant, ...props}:TagProps) => {
   return(
     <Wrapper color = {color} variant ={variant}>
