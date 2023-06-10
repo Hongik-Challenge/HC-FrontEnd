@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { Text, FlexBox } from "@hc/ui";
 import Progress from "@hc/ui/src/components/Progress";
-import { MyDashBoard, ProgressBarSection } from "@components/index";
+import { MyDashBoard, ProgressBarSection, EssentialLecture } from "@components/index";
 
 export default function Page() {
   // const lottieTop = {
@@ -28,6 +28,7 @@ export default function Page() {
         </FlexBox>
         <ProgressBarSection/>
         <MyDashBoard/>
+        <EssentialLecture/>
       </>
     )
   }

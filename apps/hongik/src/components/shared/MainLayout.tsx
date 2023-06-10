@@ -20,7 +20,6 @@ const Wrapper = styled.main`
     max-width: var(--main-width);
     margin: 0 auto;
     min-height: calc(var(--vh, 1vh) * 100);
-    right: -10px;
     position:relative;
     background-color: #ffffff;
   }

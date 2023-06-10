@@ -23,7 +23,6 @@ const Wrapper = styled.main`
   ${media.pc} {
     max-width: var(--main-width);
     margin: 0 auto;
-    right: -10px;
     position:relative;
   }
 `;

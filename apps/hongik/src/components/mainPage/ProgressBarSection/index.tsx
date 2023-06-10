@@ -16,4 +16,5 @@ export const ProgressBarSection = () => {
 
 const Wrapper = styled.div`
     padding: 16px 0px;
+    width: 100%;
 `

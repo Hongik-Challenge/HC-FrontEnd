@@ -1,13 +1,18 @@
 import styled from "styled-components";
 import { theme, FlexBox, Text, Tag } from "@hc/ui";
+import { Spacing } from "@hc/ui";
+
 export const MiniProfile =() => {
     return (
         <Wrapper>
-            <FlexBox direction = {'column'}>
+            <FlexBox direction = {'column'} justify={'flex-start'} align={'flex-start'}>
                 <Text typo ={'Subtitle2'} color ={'main_blue'}>홍시디</Text>
                 <Text typo = {'Caption3_2'}>C123456</Text>
-                <Tag variant="keyword" color ="key">시각디자인과</Tag>
-                <Tag variant="keyword" color ="key">3학년</Tag>
+                <div style={{position:'absolute', top:'60px', left: '8px'}}>
+                    <Tag variant="keyword" color ="key">시각디자인과</Tag>
+                    <Spacing size={4}/>
+                    <Tag variant="keyword" color ="key">3학년</Tag>
+                </div>
             </FlexBox>
         </Wrapper>
     )
@@ -24,4 +29,7 @@ const Wrapper = styled.div`
     background-image: url('images/hongiklogo.png');
     background-position: 100% 100%;
     background-repeat: no-repeat;
+    position: relative;
 `
+
+
