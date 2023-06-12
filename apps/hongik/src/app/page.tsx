@@ -1,26 +1,9 @@
 'use client'
 import styled from "styled-components";
-import { Text, FlexBox } from "@hc/ui";
-import Progress from "@hc/ui/src/components/Progress";
+import { Text, FlexBox, DefaultButton } from "@hc/ui";
 import { MyDashBoard, ProgressBarSection, EssentialLecture } from "@components/index";
 
 export default function Page() {
-  // const lottieTop = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: lottieJson1,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice"
-  //   }
-  // }
-  // const lottieBottom = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: lottieJson2,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice"
-  //   }
-  // }
     return (
       <>
         <FlexBox justify='flex-start' align='flex-start' fullWidth={true}>
@@ -29,10 +12,34 @@ export default function Page() {
         <ProgressBarSection/>
         <MyDashBoard/>
         <EssentialLecture/>
+        <Wrapper>
+          <DefaultButton className="bounceBtn" variant={'md'} color={'normal'} style={{width:'194px'}}>우선순위 설정하러가기</DefaultButton>
+        </Wrapper>
       </>
     )
   }
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(0deg, #e2e2e2 6.22%, rgba(217, 217, 217, 0) 79.81%);
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  bottom:0px;
+  box-sizing: border-box;
+  right:0px;
+  z-index:1;
+  border-radius:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  .bounceBtn{
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-5px);
+      }
+    }
+    animation: bounce 500ms infinite alternate ease-in;
+  }
 `

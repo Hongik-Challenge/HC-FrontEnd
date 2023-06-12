@@ -20,9 +20,12 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
   ${media.pc} {
     max-width: var(--main-width);
     margin: 0 auto;
     position:relative;
+    min-height: 100vh;
   }
 `;

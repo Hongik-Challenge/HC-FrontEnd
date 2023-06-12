@@ -47,12 +47,12 @@ const BUTTON_SHAPE : DefaultButtonShape = {
 export interface DefaultButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant: BtnSizeVariant;
     color: BtnColorVariant;
-    fullWidth: boolean;
+    fullWidth?: boolean;
 }
 
-export const DefaultButton = ({ children, variant, color, fullWidth, ...props}: DefaultButtonProps) => {
+export const DefaultButton = ({ children, variant, color, fullWidth=true, ...props}: DefaultButtonProps) => {
     return (
-        <Wrapper variant={variant} color ={color} fullWidth = {fullWidth}>
+        <Wrapper variant={variant} color ={color} fullWidth = {fullWidth} {...props}>
             {children}
         </Wrapper>
     )

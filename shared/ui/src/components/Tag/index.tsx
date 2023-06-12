@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { HTMLAttributes, ReactNode } from "react";
 import { KeyOfColor, KeyOfTypo } from "../../theme";
 import { css } from "styled-components";
 
@@ -50,7 +51,7 @@ const TAG_COLOR : TagColor = {
   }
 }
 
-export interface TagProps extends React.ComponentProps<'div'> {
+export interface TagProps extends HTMLAttributes<HTMLDivElement> {
   color: TagColorVariant;
   variant: TagVariant;
 }
@@ -62,7 +63,7 @@ export interface TagProps extends React.ComponentProps<'div'> {
 
 export const Tag = ({children, color, variant, ...props}:TagProps) => {
   return(
-    <Wrapper color = {color} variant ={variant}>
+    <Wrapper color = {color} variant ={variant} {...props}>
       {children}
     </Wrapper>
   )
@@ -80,4 +81,5 @@ const Wrapper = styled.div<{color: TagColorVariant, variant: TagVariant}>`
     `}
   display: inline-block;
   color : ${({color, theme}) => theme.palette[TAG_COLOR[color].fontColor]};
+  width:fit-content
 `;

@@ -3,13 +3,14 @@ import styled from "styled-components";
 import { Text } from "../Text";
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImageBox } from "../ImageBox";
+import { theme } from "../../theme";
 
 export interface NavBarProps {
     label?: ReactNode;
     to?: string;
     leftElement?: ReactNode;
     rightElement?: ReactNode;
-    setState?: () => void;
+    onClickEvent?: () => void;
 
 }
 
@@ -25,7 +26,7 @@ export const NavBar = ({
     to, 
     leftElement = <ImageBox size = {[27, 27]}imageUrl='/images/classpick_logo.png'/>, 
     rightElement = <GiHamburgerMenu color='#555555' size='1.5rem'/>, 
-    setState
+    onClickEvent
 }: NavBarProps) => {
     return (
         <Wrapper>
@@ -34,7 +35,7 @@ export const NavBar = ({
                 {typeof(label) === 'string' ? (
                     <Text typo={'Headline2'}>{label}</Text>
                 ): label}
-                <div onClick ={setState} style ={{position: 'absolute', right: '2px', cursor:'pointer'}}> 
+                <div onClick ={onClickEvent} style ={{position: 'absolute', right: '2px', cursor:'pointer'}}> 
                     {rightElement}
                 </div>
             </ElemWrapper>
@@ -45,9 +46,11 @@ export const NavBar = ({
 const Wrapper = styled.div`
     display:flex;
     align-items: center;
+    background-color: ${theme.palette.white};
     width: 100%;
     height: 60px;
-    box-shadow: 0px 2px 10px rgba(37, 37, 37, 0.1);
+    z-index:100;
+    box-shadow: 0px 2px 10px rgba(37, 37, 37, 0.1)!important;
 `
 
 const ElemWrapper = styled.div`
