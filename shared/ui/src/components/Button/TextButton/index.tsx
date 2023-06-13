@@ -1,18 +1,19 @@
 import { ButtonHTMLAttributes } from "react";
 import { KeyOfColor, KeyOfTypo } from "../../../theme";
 import styled from "styled-components";
-import { theme } from "../../../theme";
 export interface TextButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     color?: KeyOfColor;
-    typo?: KeyOfTypo
+    typo?: KeyOfTypo;
+    onClickEvent?: () => void;
 }
 
 export const TextButton = ({
     children, 
     color ='black_500', 
+    onClickEvent,
     typo ='Caption3_2_1'}: TextButtonProps) => {
     return (
-        <Wrapper typo ={typo} color ={color}>
+        <Wrapper onClick ={onClickEvent} typo ={typo} color ={color}>
             {children}
         </Wrapper>
     )
@@ -21,4 +22,5 @@ export const TextButton = ({
 const Wrapper = styled.button<{color: KeyOfColor, typo: KeyOfTypo}>`
      ${({ typo, theme }) => theme.typo[typo]}
      color: ${({ theme, color }) => theme.palette[color]};
+    cursor: pointer;
 `

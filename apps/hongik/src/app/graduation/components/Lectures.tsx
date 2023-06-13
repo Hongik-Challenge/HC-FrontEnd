@@ -1,7 +1,7 @@
 import { TapBar } from "@hc/ui"
 import { useState } from "react";
 import { LectureTable } from './LectureTable';
-type LecturesType = 'allLecture' | 'GELecture' | 'SWLecture' | 'MJLecture';
+import { LecturesType } from "src/types/Lecture";
 
 const menus: { title: string; key: LecturesType }[] = [
     { title: '전체', key: 'allLecture' },
@@ -17,7 +17,7 @@ export const Lectures = () => {
         <>
             <TapBar menus={menus.map((menu) => menu.title)} 
                 currentmenu={menu} setCurrentMenu={setMenu}/>
-            <LectureTable/>
+            <LectureTable menuType={menus[menu].key}/>
         </>
     )
 }

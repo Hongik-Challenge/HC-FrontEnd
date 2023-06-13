@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { theme } from "../../../theme";
 import { ReactNode } from "react";
+import { Text } from '../../Text';
 
 export interface ListProps extends React.ComponentProps<'div'>{
     first: ReactNode;

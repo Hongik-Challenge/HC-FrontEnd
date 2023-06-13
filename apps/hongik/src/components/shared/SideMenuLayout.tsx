@@ -1,6 +1,5 @@
 import { MdClear } from 'react-icons/md';
 import styled from 'styled-components';
-import { useState, useEffect } from 'react';
 import { Spacing, Text } from "@hc/ui";
 import Link from 'next/link';
 import { css } from 'styled-components';
