@@ -22,5 +22,6 @@ const Wrapper = styled.main`
     min-height: calc(var(--vh, 1vh) * 100);
     position:relative;
     background-color: #ffffff;
+    z-index: -100;
   }
 `;

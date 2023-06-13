@@ -3,7 +3,7 @@ import { theme } from "../../../theme";
 import { Text } from "../../Text";
 export interface TableHeaderProps extends React.ComponentProps<'div'>{
     tablelabel: string[];
-    width: number;
+    width?: number;
 }
     
 

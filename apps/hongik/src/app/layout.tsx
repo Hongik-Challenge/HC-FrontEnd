@@ -16,7 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode;
   const [queryClient] = useState(() => new QueryClient());
   return (
     <html lang="ko">
-      <head></head>
+      <head>
+        {/* <NavLayout/> */}
+      </head>
       <body>
         <ThemeProvider theme={theme}>
           <QueryClientProvider client={queryClient}>

@@ -22,11 +22,36 @@ export const SideMenuLayout = ({
                 <Spacing size ={90}/>
                 <ListWrapper>
                     <ListElement>
-                        <Text typo = {'Headline1'}>
-                            <Link href="/login"></Link>
+                        <Text typo = {'Headline1'} onClick={onClickEvent}>
+                            <Link href="/">홈</Link>
                         </Text>
                     </ListElement>
-                </ListWrapper>
+                    <ListElement>
+                        <Text typo = {'Headline1'} onClick={onClickEvent}>
+                            <Link href="/">수강신청 매뉴얼</Link>
+                        </Text>
+                    </ListElement>
+                    <ListElement>
+                        <Text typo = {'Headline1'} onClick={onClickEvent}>
+                            <Link href="/graduation">졸업 요건 조회하기</Link>
+                        </Text>
+                    </ListElement>
+                    <ListElement>
+                        <Text typo = {'Headline1'} onClick={onClickEvent}>
+                            <Link href="/">시간표 만들기</Link>
+                        </Text>
+                    </ListElement>
+                    <ListElement>
+                        <Text typo = {'Headline1' } onClick={onClickEvent}>
+                            <Link href="/">우선순위 설정하기</Link>
+                        </Text>
+                    </ListElement>
+                    <ListElement>
+                        <Text typo = {'Headline1'} onClick={onClickEvent}>
+                            <Link href="/">나의 수강신청 결과보기</Link>
+                        </Text>
+                    </ListElement>
+                </ListWrapper> 
             </Wrapper>
         </Container>
     )
@@ -53,7 +78,6 @@ const Container = styled.div<{ opencheck : boolean}>`
 
 const Wrapper = styled.div`
     display: flex;
-
     flex-direction: column;
     transition: all 0.1s ease-in-out;
     overflow: hidden;

@@ -35,6 +35,7 @@ const Wrapper = styled.div`
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     box-sizing: border-box;
+    z-index:-1;
 `
 const GradiantDiv = styled.div`
     background: linear-gradient(-90deg, #333333 0%, rgba(51, 51, 51, 0) 100%);
@@ -56,4 +57,5 @@ const MinorContainer = styled.div`
     border-radius: 10px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid ${theme.palette.black_900};
+    z-index:-2;
 `

@@ -28,13 +28,16 @@ export const NavLayout = () => {
 }
 
 const NavCotainer = styled.div`
-    position:fixed;
     top:0;
     width: 100%;
+    position:fixed;
+    ${media.pc} {
+        width: var(--main-width);
+    }
 `
 const SideContainer = styled.div`
     top:0;
-    max-width: 100vw;
+    width: 100%;
     box-sizing:border-box;
     overflow:hidden;
     position: absolute;

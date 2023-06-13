@@ -13,7 +13,7 @@ export const GraduationDashBoard = () => {
                         <Text typo={'Subtitle2'}>전체</Text>
                         <Text typo ={'Subtitle2'}>졸업요건</Text>
                     </FlexBox>
-                    <FlexBox gap ={10}>
+                    <FlexBox gap ={9}>
                         <FlexBox direction="column" align="flex-start" justify={'flex-start'}>
                             <Text typo ={'Caption2_1'}>졸업인정</Text>
                             <Text typo ={'Subtitle1'} color ={'main_blue'}>72</Text>
@@ -66,6 +66,7 @@ const Wrapper = styled.div`
     border-radius: 10px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     flex: 2 1 0;
+    z-index:-1;
     `
 
 const Diagonal = styled.div`
