@@ -35,6 +35,7 @@ export const FlexBox = ({
 }: FlexBoxProps) => {
     return (
         <div
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
             css={css`
                 display: flex;

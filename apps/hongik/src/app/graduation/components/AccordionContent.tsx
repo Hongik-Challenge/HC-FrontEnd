@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { PassedLecture } from "src/types/Lecture";
-import { theme, FlexBox, Text} from "@hc/ui"
+import {  FlexBox, Text} from "@hc/ui"
 
-export const AccordionContent =({lecDetail}:{lecDetail:PassedLecture }) => {
+
+
+export default function AccordionContent ({ lecDetail }:{lecDetail:PassedLecture }){
     const {lectureId, professor, when, myGrade, cyber ,etc} = lecDetail;
-
     return (
         <Wrapper>
             <FlexBox gap={10} direction={'column'} align={'flex-start'}>

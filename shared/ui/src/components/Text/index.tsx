@@ -25,6 +25,7 @@ export const Text = ({
     ...props
 }: TextProps) => {
     return (
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
         <StyledText typoKey = {typo} colorKey = {color} as = {as} {...props}>
             {children}
