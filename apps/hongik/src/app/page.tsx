@@ -1,7 +1,7 @@
 'use client'
 import styled from "styled-components";
 import { Text, FlexBox, DefaultButton } from "@hc/ui";
-import { MyDashBoard, ProgressBarSection, EssentialLecture } from "@components/MainPage";
+import { MyDashBoard, ProgressBarSection, EssentialLecture } from "../components/MainPage";
 
 export default function Page() {
     return (
