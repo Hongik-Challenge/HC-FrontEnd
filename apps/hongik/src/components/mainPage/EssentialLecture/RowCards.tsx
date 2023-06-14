@@ -20,8 +20,8 @@ const RowCards = (
     return (
         <Wrapper ref={ref}>
             {props.major ?
-                <Tag variant={'keyword'} color={'select'} style={{backgroundColor:`${theme.palette.main_blue}!important`, color:'#ffffff'}}>전공필수</Tag>
-            :  <Tag variant={'keyword'} color={'basic'} style={{backgroundColor:`${theme.palette.main_red}!important`, color:'#ffffff'}}>교양필수</Tag>
+                <Tag variant={'keyword'} color={'select'}>전공필수</Tag>
+            :  <Tag variant = {'keyword'} color ={'alert'}>교양필수</Tag>
             }
             <Text typo={'Subtitle1'}>{props.label}</Text>
             <Text typo={'Caption2_1'}>3학점</Text>

@@ -2,6 +2,7 @@ import { TapBar } from "@hc/ui"
 import { useState } from "react";
 import { LectureTable } from './LectureTable';
 import { LecturesType } from "src/types/Lecture";
+import { GraduationCount } from './GraduationCount';
 
 const menus: { title: string; key: LecturesType }[] = [
     { title: '전체', key: 'allLecture' },
@@ -18,6 +19,7 @@ export const Lectures = () => {
             <TapBar menus={menus.map((menu) => menu.title)} 
                 currentmenu={menu} setCurrentMenu={setMenu}/>
             <LectureTable menuType={menus[menu].key}/>
+            <GraduationCount menuType={menus[menu].key}/>
         </>
     )
 }

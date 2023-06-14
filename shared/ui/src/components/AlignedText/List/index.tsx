@@ -13,9 +13,9 @@ export interface ListProps extends React.ComponentProps<'div'>{
 export const List = ({first, second, third, width=360}: ListProps) => {
     return (
         <Wrapper width ={width}>
-            <div style={{flex: '2 1 0', }}>{first}</div>
-            <div style={{flex: '3 1 0', }}>{second}</div>
-            <div style={{flex: '1 1 0', }}>{third}</div>
+            <div style={{flexGrow: '2', maxWidth:'150px'}}>{first}</div>
+            <div style={{flexGrow: '3', maxWidth:'120px' }}>{second}</div>
+            <div style={{flexGrow: '1', }}>{third}</div>
         </Wrapper>
     )
 }

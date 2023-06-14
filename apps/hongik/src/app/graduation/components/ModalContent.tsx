@@ -39,7 +39,7 @@ export const ModalContent = ({lec}: {lec:string}) => {
             ): (
                 <FlexBox direction={'column'}>
                     <TableHeader width={340} tablelabel={['강의명','개설학기','학점']}/>
-                    
+                    <ListWrapper>
                         {lectureDetail &&
                             lectureDetail.map((lecDetail,idx) => { return(
                                 <List key={idx} 
@@ -47,12 +47,16 @@ export const ModalContent = ({lec}: {lec:string}) => {
                                     second={<Text typo={'Body1_2'}>{lecDetail.term}</Text>}
                                     third={<Text typo={'Body1_1'}>{lecDetail.grade}</Text>}/>
                         )}) }
-                    
+                    </ListWrapper>
                 </FlexBox>)}
             </ModalWrapper>
         </>
     )
 }
+
+const ListWrapper = styled.div`
+    margin: 0px 20px;
+`
 
 const ModalHead = styled.div`
     display: flex;

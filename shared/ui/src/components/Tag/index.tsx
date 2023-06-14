@@ -4,7 +4,7 @@ import { KeyOfColor, KeyOfTypo } from "../../theme";
 import { css } from "styled-components";
 
 type TagVariant = 'filter' | 'keyword';
-type TagColorVariant  = 'basic' | 'select' | 'key'
+type TagColorVariant  = 'basic' | 'select' | 'key' | 'alert'
 type TagSize = {
   [key in TagVariant]:{
     padding: string;
@@ -48,6 +48,10 @@ const TAG_COLOR : TagColor = {
   key: {
     backgroundColor: 'black_1000',
     fontColor: 'black', 
+  },
+  alert:{
+    backgroundColor: 'main_red',
+    fontColor:'white'
   }
 }
 
