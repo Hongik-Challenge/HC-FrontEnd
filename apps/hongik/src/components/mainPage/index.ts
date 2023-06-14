@@ -1,3 +1,3 @@
 export * from './MyDashBoard';
-export * from './ProgressBarSection';
 export * from './EssentialLecture';
+export * from './ProgressBarSection';
