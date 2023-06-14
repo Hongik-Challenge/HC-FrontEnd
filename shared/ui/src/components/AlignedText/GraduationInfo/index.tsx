@@ -60,7 +60,7 @@ export interface GraduationInfoProps extends React.ComponentProps<'div'>{
     rightElement?: ReactNode;
     variant: GraduationInfoType;
 }
-export const GraduationInfo = ({label, infoString, rightElement, variant, ...props}: GraduationInfoProps) => {
+export const GraduationInfo = ({label, infoString, rightElement, variant}: GraduationInfoProps) => {
     return(
         <Wrapper variant = {variant}>
             <FlexBox gap ={8}>

@@ -25,9 +25,10 @@ export const Text = ({
     ...props
 }: TextProps) => {
     return (
+        //@ts-ignore
         <StyledText typoKey = {typo} colorKey = {color} as = {as} {...props}>
             {children}
-        </StyledText>    
+        </StyledText>       
     );
 };
 

@@ -50,9 +50,9 @@ export interface DefaultButtonProps extends ButtonHTMLAttributes<HTMLButtonEleme
     fullWidth?: boolean;
 }
 
-export const DefaultButton = ({ children, variant, color, fullWidth=true, ...props}: DefaultButtonProps) => {
+export const DefaultButton = ({ children, variant, color, fullWidth=true, }: DefaultButtonProps) => {
     return (
-        <Wrapper variant={variant} color ={color} fullWidth = {fullWidth} {...props}>
+        <Wrapper variant={variant} color ={color} fullWidth = {fullWidth} >
             {children}
         </Wrapper>
     )
@@ -60,7 +60,7 @@ export const DefaultButton = ({ children, variant, color, fullWidth=true, ...pro
 
 const Wrapper = styled.button<{variant: BtnSizeVariant, color: BtnColorVariant, fullWidth: Boolean}>`
     ${({ variant, theme }) => theme.typo[BUTTON_SHAPE[variant].typo]}
-    width: ${({variant})=> `${BUTTON_SHAPE[variant].width}`};
+    width: ${({variant, fullWidth })=> fullWidth ? '100%' : `${BUTTON_SHAPE[variant].width}`};
     height: ${({variant})=> `${BUTTON_SHAPE[variant].height}`};
     border-radius: ${({ variant }) => BUTTON_SHAPE[variant].radius}px;
     background-color: ${({ theme, color }) =>theme.palette[BUTTON_COLOR[color].background]};

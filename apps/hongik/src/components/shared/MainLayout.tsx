@@ -9,7 +9,6 @@ const MainLayout = ({children}: {
     fullWidth?: boolean;
 }) => {
   const {width, height} = useWindowSizeCustom();
-  console.log(width);
     return (
     <Wrapper width ={width}>
         {children}

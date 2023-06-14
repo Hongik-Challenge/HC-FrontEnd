@@ -61,9 +61,9 @@ export interface TagProps extends HTMLAttributes<HTMLDivElement> {
  * @param variant 'filter' | 'keyword';
  */
 
-export const Tag = ({children, color, variant, ...props}:TagProps) => {
+export const Tag = ({children, color, variant, }:TagProps) => {
   return(
-    <Wrapper color = {color} variant ={variant} {...props}>
+    <Wrapper color = {color} variant ={variant} >
       {children}
     </Wrapper>
   )

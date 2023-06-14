@@ -14,7 +14,6 @@ export const DefaultModal = ({
     children,
     onDismiss,
     open,
-    ...props
 }: DefaultModalProps) => {
     return (
         <Background open={open}>

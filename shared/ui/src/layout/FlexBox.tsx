@@ -1,6 +1,8 @@
 import { HTMLAttributes, ReactNode } from "react";
 import { CSSProperties } from "styled-components";
 import styled from "styled-components";
+import { css } from "styled-components";
+import * as _ from 'styled-components/cssprop'
 
 export interface FlexBoxProps extends HTMLAttributes<HTMLDivElement> {
     align?: CSSProperties['alignItems'];
@@ -32,10 +34,20 @@ export const FlexBox = ({
     ...props
 }: FlexBoxProps) => {
     return (
-        <FlexDiv align={align} justify={justify} direction={direction} gap={gap} fullWidth={fullWidth} 
-            {...props}>
+        <div
+        //@ts-ignore
+            css={css`
+                display: flex;
+                align-items: ${align};
+                justify-content: ${justify};
+                flex-direction: ${direction};
+                gap: ${gap}px;
+                width: ${fullWidth ? `100%` : `auto`};
+            `}
+            {...props}
+        >
             {children}
-        </FlexDiv>
+        </div>
     )
 }
 

@@ -12,7 +12,6 @@ export const LectureTable = ({menuType} : {menuType: LecturesType})  => {
     const [lec, setLecture] = useState<string>("");
     const onClickToggle = () => {
         setOpen(open => !open);
-        console.log(open);
     }
     var returnTable = LectureList;
     if (menuType !== 'allLecture'){

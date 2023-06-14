@@ -46,7 +46,6 @@ export const Accordion = forwardRef<HTMLButtonElement, AccordionProps>(
       initialState = false,
       rightElement,
       disabled = false,
-      ...props
     }: AccordionProps,
     ref,
   ) => {

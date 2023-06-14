@@ -17,7 +17,7 @@ export const ToggleButton = ({
     toggle = true,
     btnLabel = ['3학년', '전체'],
     onToggleClick = (() => (console.log('임시'))),
-    ...props
+ 
 }: ToggleButtonProps) => {
     const [selected, setClick] = useState<boolean>(toggle);
     const handleonClick = () => {
@@ -26,10 +26,10 @@ export const ToggleButton = ({
     };
    return (
     <Wrapper>
-        <FirstBtn onClick={handleonClick} selected={selected} {...props}>
+        <FirstBtn onClick={handleonClick} selected={selected} >
             {btnLabel[0]}
         </FirstBtn>
-        <SecondBtn onClick={handleonClick} selected={!selected} {...props}>
+        <SecondBtn onClick={handleonClick} selected={!selected}>
             {btnLabel[1]}
         </SecondBtn>
     </Wrapper>

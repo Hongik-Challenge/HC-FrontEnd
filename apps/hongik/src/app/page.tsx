@@ -13,11 +13,29 @@ export default function Page() {
         <MyDashBoard/>
         <EssentialLecture/>
         <Wrapper>
-          <DefaultButton className="bounceBtn" variant={'md'} color={'normal'} style={{width:'194px'}}>우선순위 설정하러가기</DefaultButton>
+          <BtnWrapper>
+            <DefaultButton className="bounceBtn" variant={'md'} color={'normal'} style={{width:'194px'}}>우선순위 설정하러가기</DefaultButton>
+          </BtnWrapper>
         </Wrapper>
       </>
     )
   }
+
+const BtnWrapper = styled.div`
+  width :194px;
+  height: 100px;
+  .bounceBtn{
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  animation: bounce 500ms infinite alternate ease-in;
+`
 const Wrapper = styled.div`
   background: linear-gradient(0deg, #e2e2e2 6.22%, rgba(217, 217, 217, 0) 79.81%);
   height: 150px;

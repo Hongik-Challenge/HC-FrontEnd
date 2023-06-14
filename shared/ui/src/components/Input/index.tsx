@@ -35,7 +35,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
         return (
             <FlexBox direction='column' gap ={7} style={{width:'360px'}}>
                 <Wrapper width ={width} height ={height}>
-                    <InputWrapper value={value} ref={ref} onClick={props.onClick} autoComplete="off" {...props}></InputWrapper>
+                    <InputWrapper value={value} ref={ref} onClick={props.onClick} autoComplete="off" ></InputWrapper>
                 </Wrapper>
                 {errorMessage && (
                     <MessageWrapper>
