@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Spacing, Text } from "@hc/ui";
 import Link from 'next/link';
 import { css } from 'styled-components';
+import { media } from "@hc/ui";
 
 
 export interface MenuOptionProps {
@@ -18,7 +19,7 @@ export const SideMenuLayout = ({
         <Container opencheck={openMenu}>
             <Wrapper>
                 <MdClear size={'1.5rem'} onClick ={onClickEvent} style ={{position: 'absolute', right: '15px', cursor:'pointer'}}/>
-                <Spacing size ={90}/>
+                <Spacing size ={70}/>
                 <ListWrapper>
                     <ListElement>
                         <Text typo = {'Headline1'} onClick={onClickEvent}>
@@ -58,18 +59,18 @@ export const SideMenuLayout = ({
 
 const Container = styled.div<{ opencheck : boolean}>`
     width: 390px;
-    z-index: 1009!important;
     right: 0px;
     height:100vh;
     background-color: #fff;
+    position:absolute;
     transition: all 0.1s ease-in-out;
+    z-index:2;
     ${({opencheck}) => 
         opencheck ?
         css`
             transform: translateX(0px);
         `:
         css`
-            
             transform: translateX(390px);
         `
     }    
@@ -79,7 +80,6 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     transition: all 0.1s ease-in-out;
-    overflow: hidden;
     width: 100%;
     padding-top: 26px;
 `

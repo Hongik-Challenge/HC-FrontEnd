@@ -14,3 +14,4 @@ export * from './Progress';
 export * from './Tag';
 export * from './TapBar';
 export * from './Text';
+export * from './Accordion';

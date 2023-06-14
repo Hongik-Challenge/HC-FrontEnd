@@ -14,7 +14,7 @@ const ContentLayout = ({children}: {
 
 export default ContentLayout;
 
-const Wrapper = styled.main`
+const Wrapper = styled.div`
   padding: 0px 20px;
   padding-top: 80px;
   display: flex;

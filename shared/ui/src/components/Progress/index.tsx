@@ -35,7 +35,6 @@ const Wrapper = styled.div`
 
 const Circle = styled.div<{ currentNum: boolean, isFilled: boolean }>`
   width: 50px;
-  z-index:-1;
   height: 50px;
   border-radius: 50%;
   border: 4px solid ${({ theme }) => theme.palette.black_800};

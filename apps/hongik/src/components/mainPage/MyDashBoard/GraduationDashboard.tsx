@@ -66,7 +66,6 @@ const Wrapper = styled.div`
     border-radius: 10px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     flex: 2 1 0;
-    z-index:-1;
     `
 
 const Diagonal = styled.div`

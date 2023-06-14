@@ -45,7 +45,7 @@ const Background = styled.div<{open: boolean}>`
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index:1;
+    z-index:120;
     ${({open}) => (!open && css`
         display: none;
     `)}
@@ -63,6 +63,7 @@ const ModalWrapper = styled.div`
     padding: 27px 21px;
     background-color : #fff;
     z-index: 2;
+    border-radius:10px;
     position: relative;
     @keyframes fadeIn {
         from {

@@ -1,14 +1,12 @@
 import { NavBar, media } from "@hc/ui";
 import styled from "styled-components";
 import Image from "next/image";
+import { ReactNode } from "react";
 import { useState, useCallback, useEffect } from "react";
 import { SideMenuLayout  } from "./SideMenuLayout";
 
 export const NavLayout = () => {
     const [open, setOpen] = useState(false);
-    // const onClickToggle = useCallback(() => {
-    //     setOpen(!open);
-    //   },[open])
     const onClickToggle = () => {
         setOpen(open => !open)
     }
@@ -30,26 +28,14 @@ export const NavLayout = () => {
 const NavCotainer = styled.div`
     top:0;
     width: 100%;
+    height:60px;
+    max-width:600px;
     position:fixed;
-    ${media.pc} {
-        width: var(--main-width);
-    }
-`
-const SideContainer = styled.div`
-    top:0;
-    width: 100%;
-    box-sizing:border-box;
-    overflow:hidden;
-    position: absolute;
+    z-index: 2;
+    overflow-x:hidden
 `
 
-const NavWrapper = styled.div`
-    margin-bottom: 20px;
-    width: 100%;
-    background:'#fff';
-    top:0;
-    z-index:100;
-    ${media.pc} {
-        width: var(--main-width);
-  }
+const SideContainer= styled.div`
+    max-width:600px;
+    position:relative;
 `

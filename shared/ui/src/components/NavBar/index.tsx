@@ -45,10 +45,12 @@ export const NavBar = ({
 
 const Wrapper = styled.div`
     display:flex;
+    max-width: 600px;
     align-items: center;
     background-color: ${theme.palette.white};
     width: 100%;
     height: 60px;
+    position:relative;
     z-index:100;
     box-shadow: 0px 2px 10px rgba(37, 37, 37, 0.1)!important;
 `

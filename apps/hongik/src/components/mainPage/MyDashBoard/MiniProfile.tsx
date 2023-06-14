@@ -30,7 +30,6 @@ const Wrapper = styled.div`
     background-position: 100% 100%;
     background-repeat: no-repeat;
     position: relative;
-    z-index:-1;
 `
 
 

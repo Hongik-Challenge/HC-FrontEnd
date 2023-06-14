@@ -29,4 +29,5 @@ const Wrapper = styled.div<{width: number}>`
     align-items: center;
     justify-content: flex-start;
     padding: 15px 19px;
+    gap: 8px;
 `

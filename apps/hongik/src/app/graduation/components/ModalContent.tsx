@@ -1,14 +1,13 @@
 import { LectureList } from "@store/LectureList";
 import { PassedLectures } from "@store/PassNonPass";
 import styled from "styled-components";
-import { Text, FlexBox, Spacing, TableHeader, List } from "@hc/ui";
+import { AccordionContent } from "./AccordionContent";
+import { Text, FlexBox, Spacing, TableHeader, List, Accordion, Padding } from "@hc/ui";
 
 export const ModalContent = ({lec}: {lec:string}) => {
     const modalLectureInfo = LectureList.filter(lecture => lecture.lecture === lec);
     const {category, lectureDetail, isPassed} = modalLectureInfo[0];
-    if (isPassed === 'Passed'){
-        
-    }
+    const passedLectureInfo = PassedLectures.filter(lecture => lecture.lecture === lec);
     return(
         <>  
             <ModalHead>
@@ -23,15 +22,33 @@ export const ModalContent = ({lec}: {lec:string}) => {
             <Spacing size ={30} />
             <ModalWrapper>
             {isPassed === 'Passed' ? (
-                <TableHeader width={340} tablelabel={['강의명','학점']}/>
-                
+                <FlexBox direction={'column'}>
+                    <TableHeader width={340} tablelabel={['강의명','학점']}/>
+                    {passedLectureInfo.length > 0 && 
+                        passedLectureInfo.map((lecDetail,idx) => {
+                            return(
+                                <Accordion key={idx} title={lecDetail.lectureLabel} 
+                                    rightElement={lecDetail.grade}
+                                    contentHeight={218}
+                                    option={lecDetail.etc}
+                                    content={< AccordionContent lecDetail={lecDetail}/>}/>
+                            )
+                        })}
+                    
+                </FlexBox>
             ): (
-                <TableHeader width={340} tablelabel={['강의명','개설학기','학점']}/>
-                {lectureDetail &&
-                    lectureDetail.map((lecDetail, idx) => {
-                        console.log(lecDetail);
-                    })}
-            )}
+                <FlexBox direction={'column'}>
+                    <TableHeader width={340} tablelabel={['강의명','개설학기','학점']}/>
+                    
+                        {lectureDetail &&
+                            lectureDetail.map((lecDetail,idx) => { return(
+                                <List key={idx} 
+                                    first={<Text typo={'Subtitle1'}>{lecDetail.lectureLabel}</Text>}
+                                    second={<Text typo={'Body1_2'}>{lecDetail.term}</Text>}
+                                    third={<Text typo={'Body1_1'}>{lecDetail.grade}</Text>}/>
+                        )}) }
+                    
+                </FlexBox>)}
             </ModalWrapper>
         </>
     )

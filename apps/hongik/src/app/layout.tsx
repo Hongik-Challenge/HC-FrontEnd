@@ -27,9 +27,9 @@ export default function RootLayout({ children }: { children: React.ReactNode;
                 <StyledComponentsRegistry>
                   <MainLayout>
                     <NavLayout/>
-                    <ContentLayout>
-                      {children}
-                    </ContentLayout>
+                      <ContentLayout>
+                        {children}
+                      </ContentLayout>
                   </MainLayout>
                 </StyledComponentsRegistry>
             </QueryClientProvider>

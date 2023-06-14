@@ -52,7 +52,6 @@ export const MenuOption = ({
 
 const Container = styled.div`
     width: 100%;
-    z-index: 100;
     position: fixed;
     right: 20px;
     .close{

@@ -26,7 +26,6 @@ const Wrapper = styled.div`
   bottom:0px;
   box-sizing: border-box;
   right:0px;
-  z-index:-1;
   border-radius:10px;
   display:flex;
   justify-content:center;

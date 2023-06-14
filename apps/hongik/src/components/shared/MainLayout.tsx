@@ -1,27 +1,29 @@
 import { media } from "@hc/ui";
 import styled from "styled-components";
 import { ReactNode } from "react";
+import useWindowSizeCustom from '../../hooks/useResize';
 
 
 const MainLayout = ({children}: {
     children: ReactNode,
     fullWidth?: boolean;
 }) => {
+  const {width, height} = useWindowSizeCustom();
+  console.log(width);
     return (
-    <Wrapper>
+    <Wrapper width ={width}>
         {children}
     </Wrapper>)
 }
 
 export default MainLayout;
 
-const Wrapper = styled.main`
-  ${media.pc} {
-    max-width: var(--main-width);
+const Wrapper = styled.div<{width: number}>`
+    max-width: 600px;
     margin: 0 auto;
     min-height: calc(var(--vh, 1vh) * 100);
-    position:relative;
+    
     background-color: #ffffff;
-    z-index: -100;
-  }
+    overflow-x:hidden
+    
 `;
