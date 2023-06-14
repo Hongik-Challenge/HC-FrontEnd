@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '@hc/ui';
-import { Footer } from '@components/Footer';
 import { GlobalStyle } from 'src/styles/GlobalStyle';
 import MainLayout from '@components/shared/MainLayout';
 import { NavLayout } from '@components/shared/NavLayout';

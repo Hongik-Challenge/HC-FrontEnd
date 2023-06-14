@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { theme } from "@hc/ui";
-import { Text } from '../../../../../shared/ui/src/components/Text/index';
 
 export const Footer = () => {
     return (

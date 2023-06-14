@@ -1,7 +1,5 @@
 import { FlexBox } from "@hc/ui"
 import { Text } from "@hc/ui"
-import styled from 'styled-components';
-
 export const ProgressBarCaption = ({}) => {
     return(
             <FlexBox gap={28}>

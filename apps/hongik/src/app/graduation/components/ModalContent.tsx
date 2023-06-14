@@ -2,7 +2,7 @@ import { LectureList } from "@store/LectureList";
 import { PassedLectures } from "@store/PassNonPass";
 import styled from "styled-components";
 import  AccordionContent from "./AccordionContent";
-import { Text, FlexBox, Spacing, TableHeader, List, Accordion, Padding } from "@hc/ui";
+import { Text, FlexBox, Spacing, TableHeader, List, Accordion } from "@hc/ui";
 
 export const ModalContent = ({lec}: {lec:string}) => {
     const modalLectureInfo = LectureList.filter(lecture => lecture.lecture === lec);
